@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Share a professional enquiry, guest proposal, or conversation idea for Dr. King’ori."
+    />
+    <meta name="author" content="Dr. King’ori" />
+    <meta name="theme-color" content="#0e0e0d" />
+    <title>Get in touch — Dr. King’ori</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/booking.css" />
+    <link rel="stylesheet" href="styles/kingori.css" />
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/booking.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="page-header">
+      <div class="header-container">
+        <a class="wordmark" href="index.html" aria-label="Dr. King’ori home">
+          <span class="wordmark-name">Dr. King’ori</span>
+          <span class="wordmark-caption">Conversations that stay with you</span>
+        </a>
+        <nav class="navigation" aria-label="Main navigation">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="media.html">Conversations</a></li>
+            <li class="nav-item"><a href="index.html#about">About</a></li>
+          </ul>
+        </nav>
+        <div class="actions">
+          <a href="booking.html" class="cta-btn" aria-current="page">Get in touch <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="booking-main">
+      <section class="booking-intro" aria-labelledby="booking-title">
+        <p class="eyebrow"><span></span> OPEN A CONVERSATION</p>
+        <h1 id="booking-title">Let’s make<br /><em>something matter.</em></h1>
+        <p class="booking-intro-description">
+          Have a professional enquiry, an idea for a guest, or a question
+          worth exploring? Share a little context below.
+        </p>
+      </section>
+
+      <section class="booking-form-section" aria-labelledby="form-title">
+        <div class="booking-form-intro">
+          <p class="eyebrow">YOUR NOTE</p>
+          <h2 id="form-title">Tell us what’s on your mind.</h2>
+          <p>Choose the closest fit and include the details that will help us understand your message.</p>
+          <div class="contact-aside">
+            <p>Good conversations begin with a thoughtful question.</p>
+          </div>
+        </div>
+
+        <form class="booking-form" id="booking-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Your name <span>Required</span></label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email address <span>Required</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="organization">Organization <span>Optional</span></label>
+            <input id="organization" name="organization" type="text" autocomplete="organization" />
+          </div>
+          <div class="form-field">
+            <label for="inquiry-type">What is this about? <span>Required</span></label>
+            <select id="inquiry-type" name="inquiryType" required>
+              <option value="">Choose a subject</option>
+              <option value="professional">Professional enquiry</option>
+              <option value="guest">Guest or topic proposal</option>
+              <option value="partnership">Partnership enquiry</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="message">Your message <span>Required</span></label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <p class="form-demo-notice">
+            Form setup is still in progress. Messages are not sent or stored from this preview.
+          </p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <button class="button button-dark" type="submit">Review your message <span aria-hidden="true">↗</span></button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <a class="wordmark footer-wordmark" href="index.html"><span class="wordmark-name">Dr. King’ori</span><span class="wordmark-caption">Where curiosity becomes a conversation.</span></a>
+      <nav aria-label="Footer navigation"><ul class="footer-nav"><li><a href="index.html">Home</a></li><li><a href="media.html">Conversations</a></li><li><a href="index.html#about">About</a></li><li><a href="references.html">Image credits</a></li></ul></nav>
+      <p class="footer-meta">© <span id="currentyear"></span> Dr. King’ori</p>
+    </footer>
+  </body>
+</html>

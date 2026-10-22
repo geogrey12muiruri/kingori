@@ -1,0 +1,117 @@
+.media-intro,
+.media-library {
+  width: min(100% - 2rem, var(--content-width));
+  margin-inline: auto;
+}
+
+.media-intro {
+  padding-block: clamp(3rem, 8vw, 6rem) 2rem;
+}
+
+.media-intro h1 {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+  font-size: var(--fs-display);
+  line-height: 1.05;
+}
+
+
+
+.media-intro-description {
+  max-width: 62ch;
+  line-height: 1.7;
+}
+
+.media-library {
+  padding-block: 2rem 5rem;
+}
+
+.media-library-title {
+  margin-bottom: 1.5rem;
+}
+
+.media-library-title h2 {
+  color: var(--color-text);
+  font-size: var(--fs-section);
+}
+
+.media-controls {
+  display: grid;
+  gap: 1rem;
+  margin-block: 2rem 1rem;
+}
+
+.media-controls label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.media-controls input,
+.media-controls select {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.25rem;
+  background-color: #11151c;
+  color: var(--color-text);
+}
+
+.media-results {
+  margin-block: 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+
+.media-main .highlight-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.media-main .highlight-image img {
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 10;
+}
+.media-main .favorite-button {
+  align-self: flex-start;
+  margin: auto 1rem 1rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--color-accent);
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.media-main .favorite-button:hover,
+.media-main .favorite-button[aria-pressed="true"] {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+}
+.media-reset {
+  min-height: 2.75rem;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.25rem;
+  background-color: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.media-reset:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+@media (min-width: 48rem) {
+  .media-main .highlight-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .media-controls {
+    grid-template-columns: minmax(0, 2fr) minmax(12rem, 1fr) auto;
+    align-items: end;
+  }
+}
