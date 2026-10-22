@@ -1860,6 +1860,10 @@ img {
 }
 
 @media (max-width: 699px) {
+  .page-header .wordmark-caption {
+    display: none;
+  }
+
   .media-page .header-container {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.55rem 0.75rem;
@@ -1874,11 +1878,6 @@ img {
 
   .media-page .wordmark-name {
     font-size: 1.35rem;
-  }
-
-  .media-page .wordmark-caption {
-    font-size: 0.52rem;
-    letter-spacing: 0.11em;
   }
 
   .media-page .navigation {
@@ -2125,11 +2124,6 @@ img {
     font-size: 1.35rem;
   }
 
-  .home-page .wordmark-caption {
-    font-size: 0.55rem;
-    letter-spacing: 0.12em;
-  }
-
   .home-page .navigation {
     grid-column: 1 / -1;
     grid-row: 2;
@@ -2263,6 +2257,30 @@ img {
   }
 
   .home-hero .hero-bottomline {
+    display: none;
+  }
+
+  .topic-grid {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 2rem;
+  }
+
+  .topic-number,
+  .topic-description,
+  .topic-link-label {
+    display: none;
+  }
+
+  .topic-shortcuts {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+
+  .listen-section .listen-copy p:not(.eyebrow),
+  .listen-section .button-light,
+  .about-copy p + p,
+  .about-copy .text-link {
     display: none;
   }
 }
