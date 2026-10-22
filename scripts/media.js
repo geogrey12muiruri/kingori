@@ -122,8 +122,8 @@ if (
         ? String(conversation.source.order).padStart(3, "0")
         : `P${String(conversation.source.sourceId.replace("ep-", "")).padStart(2, "0")}`;
       const guests = conversation.guests.length
-        ? conversation.guests.join(", ")
-        : "Guest not separately identified";
+        ? `<p class="conversation-guest">${escapeHtml(conversation.guests.join(", "))}</p>`
+        : "";
       const metadata = [
         formatDuration(conversation.durationSeconds, conversation.durationLabel),
         formatDate(conversation.releaseDate),
@@ -151,7 +151,7 @@ if (
             <p class="conversation-index">${escapeHtml(sourceIndex)} <span>/ ${escapeHtml(formatLabel)}</span></p>
             <div class="conversation-copy">
               <h3>${escapeHtml(conversation.title)}</h3>
-              <p class="conversation-guest">${escapeHtml(guests)}</p>
+              ${guests}
               ${metadata ? `<p class="conversation-meta">${escapeHtml(metadata)}</p>` : ""}
               <div class="conversation-tags">${topicTags}</div>
             </div>
